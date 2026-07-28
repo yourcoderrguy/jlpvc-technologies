@@ -25,7 +25,7 @@ export default function Home() {
   if (!isMounted) return null;
 
   return (
-    <main className="min-h-screen bg-brand-dark selection:bg-brand-orange/30">
+    <main className="min-h-screen bg-brand-dark selection:bg-brand-blue/30">
       <AnimatePresence mode="wait">
         {showIntro && (
           <IntroSequence key="intro" onComplete={handleIntroComplete} />

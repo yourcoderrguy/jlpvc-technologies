@@ -31,7 +31,7 @@ export default function ServicesGrid() {
         <h2 className="text-3xl md:text-5xl font-bold text-brand-white mb-4">
           What We Do
         </h2>
-        <p className="text-brand-white/70 text-lg max-w-2xl">
+        <p className="text-brand-white/80 text-lg max-w-2xl">
           We don't just write code; we build reliable digital solutions that save you time and help your business make more money.
         </p>
       </div>
@@ -45,9 +45,9 @@ export default function ServicesGrid() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -5 }}
-            className={`group relative p-8 rounded-xl bg-brand-gray/20 border border-brand-gray/50 hover:border-brand-orange/50 transition-all ${service.colSpan} overflow-hidden`}
+            className={`group relative p-8 rounded-xl bg-brand-white/5 border border-brand-white/10 hover:border-brand-blue/50 transition-all ${service.colSpan} overflow-hidden`}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <h3 className="relative z-10 text-xl md:text-2xl font-bold text-brand-white mb-3">
               {service.title}
@@ -56,8 +56,8 @@ export default function ServicesGrid() {
               {service.description}
             </p>
             
-            <div className="absolute bottom-4 right-4 opacity-10 group-hover:opacity-30 transition-opacity">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-brand-orange">
+            <div className="absolute bottom-4 right-4 opacity-20 group-hover:opacity-100 transition-opacity duration-300">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-brand-orange group-hover:text-brand-yellow transition-colors">
                 <path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"></path>
               </svg>
             </div>

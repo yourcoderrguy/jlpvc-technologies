@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Our JLPVC Brand Palette */
-  --color-brand-dark: #040B16;
-  --color-brand-orange: #FF5E00;
-  --color-brand-white: #F8FAFC;
-  --color-brand-gray: #1E293B;
+  /* JLPVC Technologies Official Palette */
+  --color-brand-blue: #0047AB;
+  --color-brand-orange: #FFA500;
+  --color-brand-yellow: #FFEA00;
+  --color-brand-dark: #3C4142;
+  --color-brand-white: #FFFFFF;
 }
 
-/* Set the dark command-center aesthetic as the absolute default */
 @layer base {
   body {
     background-color: var(--color-brand-dark);
@@ -24,7 +24,7 @@
     background: var(--color-brand-dark);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-brand-gray);
+    background: var(--color-brand-blue);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {

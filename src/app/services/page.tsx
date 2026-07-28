@@ -4,7 +4,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 
 export default function ServicesPage() {
   return (
-    <main className="pt-32 pb-16 min-h-screen selection:bg-brand-orange/30">
+    <main className="pt-32 pb-16 min-h-screen selection:bg-brand-blue/30">
       <div className="max-w-7xl mx-auto px-6 mb-8">
         <motion.p 
           initial={{ opacity: 0 }} 

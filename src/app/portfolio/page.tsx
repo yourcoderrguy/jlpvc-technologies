@@ -22,7 +22,7 @@ const projects = [
 
 export default function PortfolioPage() {
   return (
-    <main className="pt-32 pb-24 px-6 max-w-6xl mx-auto min-h-screen selection:bg-brand-orange/30">
+    <main className="pt-32 pb-24 px-6 max-w-6xl mx-auto min-h-screen selection:bg-brand-blue/30">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-16">
         <p className="text-brand-orange font-mono text-sm mb-4">Recent Projects</p>
         <h1 className="text-5xl md:text-6xl font-bold text-brand-white">Our Work.</h1>
@@ -35,7 +35,7 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="group relative grid grid-cols-1 md:grid-cols-12 gap-8 border-t border-brand-gray/50 pt-12"
+            className="group relative grid grid-cols-1 md:grid-cols-12 gap-8 border-t border-brand-white/10 pt-12"
           >
             <div className="md:col-span-4">
               <span className="text-brand-orange font-mono text-xl block mb-2">{project.id} //</span>

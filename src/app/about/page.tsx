@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <main className="pt-32 pb-24 px-6 max-w-4xl mx-auto min-h-screen selection:bg-brand-orange/30">
+    <main className="pt-32 pb-24 px-6 max-w-4xl mx-auto min-h-screen selection:bg-brand-blue/30">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <div className="h-px w-full bg-brand-gray/50" />
+        <div className="h-px w-full bg-brand-white/10" />
 
         <section>
           <h2 className="text-2xl font-bold text-brand-white mb-4">Why Choose Us?</h2>
