@@ -9,7 +9,7 @@ const projects = [
     problem: "The client required an expansive digital platform to broaden access to rigorous academic courses without compromising on structure, speed, or user engagement.",
     solution: "We engineered a highly structured, SEO-optimized educational portal focusing on intuitive UI/UX design to handle complex academic routing and course delivery seamlessly.",
     result: "A scalable, high-performance learning environment that successfully connects students with real-world career pathways.",
-    link: "https://your-link-here.com"
+    link: "https://campuswithoutwalls.org/",
   },
   {
     id: "02",
@@ -22,12 +22,12 @@ const projects = [
   },
   {
     id: "03",
-    title: "EDDH Platform",
+    title: "EDH Platform",
     sector: "Custom Web Architecture",
     problem: "The client required a robust, modern web platform to upgrade their digital footprint, handle traffic effectively, and drive user engagement.",
     solution: "We architected a bespoke web solution from the ground up, prioritizing clean code, frictionless user navigation, and highly reliable infrastructure.",
     result: "A top-tier digital presence that operates with zero downtime, eliminating previous operational bottlenecks.",
-    link: "https://your-link-here.com"
+    link: "https://www.entrepreneurshipdevthub.com/",
   }
 ];
 
