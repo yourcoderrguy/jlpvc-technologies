@@ -7,13 +7,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         
         <div className="flex flex-col items-start">
-          <Link href="/" className="bg-brand-white rounded-md p-1 inline-block mb-4 hover:scale-105 transition-transform">
+          {/* Applied the exact same zooming crop fix here */}
+          <Link 
+            href="/" 
+            className="bg-brand-white rounded inline-flex items-center justify-center h-12 w-40 mb-4 overflow-hidden hover:scale-105 transition-transform"
+          >
             <Image 
               src="/jlpvc.jpg" 
               alt="JLPVC Technologies Logo" 
-              width={100} 
-              height={32} 
-              style={{ width: "auto", height: "32px" }}
+              width={200} 
+              height={100} 
+              className="w-full h-full object-cover scale-[1.4] origin-center"
             />
           </Link>
           <p className="text-brand-white/70 text-sm max-w-xs">

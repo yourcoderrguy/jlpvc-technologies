@@ -27,15 +27,19 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        {/* Logo with strict aspect ratio styling to clear Next.js warning */}
-        <Link href="/" className="relative z-50 flex items-center bg-brand-white rounded-md p-1 hover:scale-105 transition-transform">
+        {/* Fixed Logo: Strictly sized rectangular container that zooms in to crop the white space */}
+        <Link 
+          href="/" 
+          className="relative z-50 flex items-center justify-center bg-brand-white rounded flex-shrink-0 h-10 w-36 overflow-hidden hover:scale-105 transition-transform"
+        >
           <Image 
             src="/jlpvc.jpg" 
             alt="JLPVC Technologies Logo" 
-            width={120} 
-            height={40} 
-            style={{ width: "auto", height: "40px" }}
+            width={200} 
+            height={100} 
             priority
+            /* scale-[1.4] zooms in. You can change this to 1.3 or 1.5 if you need more/less cropping */
+            className="w-full h-full object-cover scale-[1.4] origin-center"
           />
         </Link>
         
@@ -65,7 +69,7 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Desktop CTA - Now triggers a phone call */}
+        {/* Desktop CTA */}
         <div className="hidden md:block">
           <a href="tel:+2349166177467" className="bg-brand-blue text-brand-white px-6 py-2.5 rounded font-semibold hover:bg-brand-orange shadow-[0_0_15px_rgba(0,71,171,0.3)] hover:shadow-[0_0_20px_rgba(255,165,0,0.5)] transition-all">
             Book a Call
@@ -95,7 +99,6 @@ export default function Navbar() {
                 </Link>
               ))}
               
-              {/* Mobile CTA - Now triggers a phone call */}
               <div className="pt-4 mt-4 border-t border-brand-white/10">
                 <a 
                   href="tel:+2349166177467" 
