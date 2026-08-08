@@ -7,17 +7,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         
         <div className="flex flex-col items-start">
-          {/* Applied the exact same zooming crop fix here */}
+          {/* Fixed Logo: Scaled appropriately for the footer with the exact same 1.15 zoom ratio */}
           <Link 
             href="/" 
-            className="bg-brand-white rounded inline-flex items-center justify-center h-12 w-40 mb-4 overflow-hidden hover:scale-105 transition-transform"
+            className="relative bg-brand-white rounded flex-shrink-0 w-[160px] h-[50px] mb-4 overflow-hidden hover:scale-105 transition-transform"
           >
             <Image 
               src="/jlpvc.jpg" 
               alt="JLPVC Technologies Logo" 
-              width={200} 
-              height={100} 
-              className="w-full h-full object-cover scale-[1.4] origin-center"
+              fill
+              sizes="160px"
+              className="object-cover object-center scale-[1.15]"
             />
           </Link>
           <p className="text-brand-white/70 text-sm max-w-xs">

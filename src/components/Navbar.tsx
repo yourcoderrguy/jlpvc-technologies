@@ -27,19 +27,18 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        {/* Fixed Logo: Strictly sized rectangular container that zooms in to crop the white space */}
+        {/* Fixed Logo: Fixed dimensions with a gentler 1.15 scale for a small white border */}
         <Link 
           href="/" 
-          className="relative z-50 flex items-center justify-center bg-brand-white rounded flex-shrink-0 h-10 w-36 overflow-hidden hover:scale-105 transition-transform"
+          className="relative z-50 flex items-center justify-center bg-brand-white rounded flex-shrink-0 w-[140px] h-[44px] overflow-hidden hover:scale-105 transition-transform"
         >
           <Image 
             src="/jlpvc.jpg" 
             alt="JLPVC Technologies Logo" 
-            width={200} 
-            height={100} 
+            fill
+            sizes="140px"
             priority
-            /* scale-[1.4] zooms in. You can change this to 1.3 or 1.5 if you need more/less cropping */
-            className="w-full h-full object-cover scale-[1.4] origin-center"
+            className="object-cover object-center scale-[1.15]"
           />
         </Link>
         
