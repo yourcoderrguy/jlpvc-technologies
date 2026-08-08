@@ -4,8 +4,11 @@ import ServicesGrid from "@/components/ServicesGrid";
 
 export default function ServicesPage() {
   return (
-    <main className="pt-32 pb-16 min-h-screen selection:bg-brand-blue/30">
-      <div className="max-w-7xl mx-auto px-6 mb-8">
+    <main className="pt-32 pb-16 min-h-screen selection:bg-brand-blue/30 relative overflow-hidden">
+      {/* Ambient Lighting Orb */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 mb-8">
         <motion.p 
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
@@ -22,7 +25,9 @@ export default function ServicesPage() {
         </motion.h1>
       </div>
       
-      <ServicesGrid />
+      <div className="relative z-10">
+        <ServicesGrid />
+      </div>
     </main>
   );
 }

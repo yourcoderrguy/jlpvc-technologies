@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import IntroSequence from "@/components/IntroSequence";
 import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/ServicesGrid";
+import PortfolioScroll from "@/components/PortfolioScroll";
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(false);
@@ -25,7 +26,7 @@ export default function Home() {
   if (!isMounted) return null;
 
   return (
-    <main className="min-h-screen bg-brand-dark selection:bg-brand-blue/30">
+    <main className="min-h-screen selection:bg-brand-blue/30">
       <AnimatePresence mode="wait">
         {showIntro && (
           <IntroSequence key="intro" onComplete={handleIntroComplete} />
@@ -36,6 +37,7 @@ export default function Home() {
         <>
           <Hero />
           <ServicesGrid />
+          <PortfolioScroll />
         </>
       )}
     </main>

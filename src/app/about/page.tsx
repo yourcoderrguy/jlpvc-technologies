@@ -3,11 +3,15 @@ import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <main className="pt-32 pb-24 px-6 max-w-4xl mx-auto min-h-screen selection:bg-brand-blue/30">
+    <main className="relative pt-32 pb-24 px-6 max-w-4xl mx-auto min-h-screen selection:bg-brand-blue/30">
+      {/* Ambient Lighting Orb */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-[150px] pointer-events-none"></div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        className="relative z-10"
       >
         <p className="text-brand-orange font-mono text-sm mb-4">About JLPVC</p>
         <h1 className="text-5xl md:text-6xl font-bold text-brand-white mb-12">
@@ -19,7 +23,7 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="space-y-12 text-brand-white/80 text-lg leading-relaxed"
+        className="relative z-10 space-y-12 text-brand-white/80 text-lg leading-relaxed"
       >
         <section>
           <h2 className="text-2xl font-bold text-brand-white mb-4">Our Goal</h2>

@@ -1,27 +1,28 @@
-@import "tailwindcss";
+ @import "tailwindcss";
 
 @theme {
-  /* JLPVC Technologies Official Palette */
   --color-brand-blue: #0047AB;
   --color-brand-orange: #FFA500;
   --color-brand-yellow: #FFEA00;
   --color-brand-dark: #3C4142;
+  --color-brand-darker: #2A2D2E; /* Added for depth */
   --color-brand-white: #FFFFFF;
 }
 
 @layer base {
   body {
-    background-color: var(--color-brand-dark);
+    /* Creates a radial gradient spotlight effect */
+    background: radial-gradient(circle at top center, var(--color-brand-dark), var(--color-brand-darker) 100%);
+    background-attachment: fixed;
     color: var(--color-brand-white);
     overflow-x: hidden;
   }
 
-  /* Custom scrollbar for an engineered feel */
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--color-brand-dark);
+    background: var(--color-brand-darker);
   }
   ::-webkit-scrollbar-thumb {
     background: var(--color-brand-blue);
