@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const bootSequence = [
-  "Loading workspace...",
-  "Preparing portfolio...",
-  "Loading assets...",
-  "Ready."
+ "Building fast, modern websites...",
+
+"Turning your visitors into customers...",
+
+"Helping your business grow online...",
+
+"Welcome to JLPVC Technologies."
 ];
 
 export default function IntroSequence({ onComplete }: { onComplete: () => void }) {
