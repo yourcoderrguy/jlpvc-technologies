@@ -40,10 +40,7 @@ export default function PortfolioScroll() {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    {/* CRITICAL FIX: h-auto on mobile, h-[300vh] only on desktop (md) */}
     <section ref={targetRef} className="relative h-auto md:h-[300vh] bg-brand-dark">
-      
-      {/* CRITICAL FIX: relative on mobile, sticky only on desktop (md) */}
       <div className="relative md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center overflow-visible md:overflow-hidden py-24 md:py-0">
         
         <div className="max-w-7xl mx-auto px-6 w-full mb-12">
