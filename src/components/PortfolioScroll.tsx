@@ -16,7 +16,7 @@ const projects = [
     id: "02",
     title: "Ice Cold Studio Media Portal",
     category: "Creative Portfolio Showcase",
-    description: "we architected a custom CMS and lightweight SaaS media management application featuring a secure Client Vault with role-based access control.",
+    description: "We architected a custom CMS and lightweight SaaS media management application featuring a secure Client Vault with role-based access control.",
     image: "/2.png", 
     link: "https://photoweb-chi.vercel.app/",
   },
@@ -40,8 +40,11 @@ export default function PortfolioScroll() {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-65%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-brand-dark">
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+    {/* CRITICAL FIX: h-auto on mobile, h-[300vh] only on desktop (md) */}
+    <section ref={targetRef} className="relative h-auto md:h-[300vh] bg-brand-dark">
+      
+      {/* CRITICAL FIX: relative on mobile, sticky only on desktop (md) */}
+      <div className="relative md:sticky md:top-0 h-auto md:h-screen flex flex-col justify-center overflow-visible md:overflow-hidden py-24 md:py-0">
         
         <div className="max-w-7xl mx-auto px-6 w-full mb-12">
           <motion.p 
@@ -60,7 +63,7 @@ export default function PortfolioScroll() {
           </motion.h2>
         </div>
 
-        {/* Desktop Scrolling Track */}
+        {/* Desktop Horizontal Scrolling Track */}
         <motion.div style={{ x }} className="hidden md:flex gap-8 px-6 pb-10 w-[300vw] lg:w-[200vw]">
           {projects.map((project) => (
             <a 
@@ -98,7 +101,7 @@ export default function PortfolioScroll() {
           ))}
         </motion.div>
 
-        {/* Mobile Vertical Stack */}
+        {/* Mobile Vertical Stack - Natural Scroll */}
         <div className="md:hidden flex flex-col gap-8 px-6 w-full pb-10">
           {projects.map((project) => (
             <a 
