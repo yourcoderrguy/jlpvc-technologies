@@ -99,7 +99,7 @@ export default function PortfolioScroll() {
         </motion.div>
 
         {/* Mobile Vertical Stack */}
-        <div className="md:hidden flex flex-col gap-6 px-6 w-full h-[70vh] overflow-y-auto custom-scrollbar pb-20">
+        <div className="md:hidden flex flex-col gap-8 px-6 w-full pb-10">
           {projects.map((project) => (
             <a 
               key={project.id} 
